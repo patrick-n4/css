@@ -1,0 +1,8 @@
+@font-face{
+    src: url(FONTS/SquarePeg-Regular.ttf);
+    font-family: squarePeg;
+}
+.paragraph{
+  font-family: squarePeg;
+  font-size: 3em;
+}

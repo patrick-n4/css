@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pop{
+    font-size: 1.3em;
+    padding: 1em 3em;
+    position: relative;
+    background-color: var(--background-color);
+    --background-color: rgb(188, 191, 192);
+    --background-color-change: #0Af;
+    --border-size: 5px;
+    cursor: pointer;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 1;
+    transition: color 300ms;
+}
+.pop::before{
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: var(--background-color-change);
+z-index: -1;
+transition: transform 300ms;
+transform: scaleX(0);
+transform-origin: left;
+}
+.pop:hover::before,
+.pop:focus::before{
+    transform: scaleX(1);
+
+}
+.pop:hover,
+.pop:focus{
+    color: white;
+}
